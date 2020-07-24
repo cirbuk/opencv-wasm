@@ -6,7 +6,7 @@ builder:
 
 build: clean
 	mkdir build
-	cd build && emconfigure cmake ..
+	cd build && emcmake cmake ..
 	cd build && emmake make
 
 clean:

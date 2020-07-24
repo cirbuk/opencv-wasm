@@ -1,6 +1,6 @@
 FROM trzeci/emscripten
 
-ARG OPENCV_VERSION=4.1.0
+ARG OPENCV_VERSION=4.3.0
 
 RUN mkdir -p /third-party \
   && wget \

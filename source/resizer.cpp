@@ -14,7 +14,7 @@ void Resizer::run() {
   cv::Size srcSize = inputArray.size();
   cv::UMat src(inputArray.getUMat());
 
-  double ratio = std::min(SMALL_SIZE / srcSize.width, SMALL_SIZE / srcSize.height);
+  double ratio = std::min((double)SMALL_SIZE / (double)srcSize.width, (double)SMALL_SIZE / (double)srcSize.height);
   int height = roundThis(ratio * srcSize.height);
   int width = roundThis(ratio * srcSize.width);
   const cv::Size dstSize(width, height);
