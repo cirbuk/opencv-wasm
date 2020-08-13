@@ -1,8 +1,8 @@
 all: builder
-	docker run --rm -it -v $(shell pwd):/code -w /code opencv-wasm make build
+	sudo docker run --rm -it -v $(shell pwd):/code -w /code opencv-wasm make build
 
 builder:
-	docker build -t opencv-wasm .
+	sudo docker build -t opencv-wasm .
 
 build: clean
 	mkdir build
@@ -13,4 +13,4 @@ clean:
 	rm -rf build
 
 serve:
-	python serve.py
+	python3 serve.py

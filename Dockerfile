@@ -13,4 +13,4 @@ RUN mkdir -p /third-party \
   && rm /third-party/opencv-$OPENCV_VERSION.tar.gz
 
 WORKDIR /third-party/opencv
-RUN python ./platforms/js/build_js.py build_wasm --build_wasm
+RUN python3 ./platforms/js/build_js.py build_wasm --build_wasm
